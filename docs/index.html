@@ -3,50 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="google" content="notranslate">
-        <meta name="viewport" content="width=device-width, initial-scale=0.9">
-        <link rel="stylesheet" href="fuente4.woff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>index</title>
 
         <style>
+
             body{
                 background-color: black;
-                background-image: url('Piensalo/b-index.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
             }
-/* Estilo del botón */
-.play-button { 
-    position: absolute;
-    width: 400px;
-    height: 60px;
-    top: 74%;
-    left: 38%;
-  background-color: #083a5b; /* Color de fondo */
-  font-family: fuente4, sans-serif;
-  color: #fff; /* Color del texto */
-  border: none; /* Sin borde */ 
-  font-size: 24px; /* Tamaño del texto */
-  padding: 15px 40px; /* Espaciado interno */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  transition: all 0.3s ease; /* Transición suave */
-  border-bottom: 10px solid #000; /* Borde sólido de color negro en la parte inferior */
-  border-left: 10px solid #000; /* Borde sólido de color negro en el lado izquierdo */
-  position: absolute; /* Agregar posición absoluta */ 
-}
+            img{
+                width: 650px;
+            }
+            button{
+                width: 650px;
+                height: 50px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+                cursor: pointer;
+                border: .1px solid black;
+            }
+            h1{
+                color: white;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                border: .5px solid white;
+            }
+            td, th{
+                text-align: center;     
+                border: .5px solid white;
+            }
 
-/* Estilo del botón al pasar el cursor */
-.play-button:hover {
-  background-color: #000000; /* Cambia el color de fondo */
-  border-color: #fff;
-}
-
-/* Estilo del botón al hacer clic */
-.play-button:active {
-  transform: translateY(2px); /* Efecto de clic */ 
-
-}
- 
             @media only screen and (max-width: 600px) {
             }
             @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -54,29 +43,28 @@
             @media only screen and (min-width: 1025px) {
             }
 
-            @font-face { 
-    font-family: 'fuente4';
-    src: url('fuente4.woff') format('woff'); 
-}
-    #titulo{
-        position: absolute;
-        font-family: fuente4, sans-serif;
-        color: white;
-        font-size: 120px;
-        top: 30%;
-        left: 19%;
-    }
-    </style>
+        </style>
 
     </head>
     <body onclick="audios()">
         <audio id="musica"loop>
             <source src="cancion1.mp3" type="audio/mp3">
         </audio>
-        <div>
-            <button class='play-button' onclick="window.location.href='Jugar.html'">Play</button>
-        </div>
-        <div id="titulo">TIME SPEED</div>
+        <table>
+            <tr>
+                <td><h1>Time Speed</h1></td>
+            </tr>
+            <tr>
+                <td>
+                    <div><img src="porsche_fondo.jpg" alt="mira la dirección"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div><button onclick="window.location.href='seleccion.html'"><h2>!! Jugar !!</h2></button></div>
+                </td>
+            </tr>
+        </table>
     </body>
     <script>
         function audios(){

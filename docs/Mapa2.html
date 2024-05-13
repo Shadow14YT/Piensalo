@@ -1,136 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.9">
-  <link rel="stylesheet" href="fuente4.woff">
-  <link rel="stylesheet" href="fuente1.woff">
-  <title>!! JUGAR !!</title>
-  <style>
-    body{
-      /*text-align: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;g
-      justify-content: center;
-      align-items: center;
-      height: 100vh;*/
-      background-image:url("b-jugar4.jpg");
-      background-repeat: no-repeat;
-      background-size: cover; 
-    }
-    .play-button { 
-   position: absolute;
-    width: 250px;
-    height: 50px;  
-  background-color: #000000; /* Color de fondo */
-  font-family: fuente1, sans-serif;
-  color: #fff; /* Color del texto */
-  border: none; /* Sin borde */ 
-  font-size: 24px; /* Tamaño del texto */
-  /*padding: 15px 40px;  Espaciado interno */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  transition: all 0.3s ease; /* Transición suave */
-  border-bottom: 10px solid #ffffff; /* Borde sólido de color negro en la parte inferior */
-  border-left: 10px solid #ffffff; /* Borde sólido de color negro en el lado izquierdo */
-  position: absolute; /* Agregar posición absoluta */ 
-}
-
-/* Estilo del botón al pasar el cursor */
-.play-button:hover {
-  background-color: #ffffff; /* Cambia el color de fondo */
-  border-color: #000000;
-  color: #000000;
-}
-
-/* Estilo del botón al hacer clic */
-.play-button:active {
-  transform: translateY(2px); /* Efecto de clic */ 
-}
-  .contenedor{
-    border-bottom: #fff 10px solid;
-    border-left: #fff 10px solid;
-    width: 270px;
-    height: 540px;
-    position: absolute;
-    top: 70px;
-  }
-  .contenedor:hover{
-    border-bottom: #000000 10px solid;
-    border-left: #0f001f 10px solid;   
-  }
-  img{
-    width: 60px;
-    height: 140px;
-  }
-  p{
-    margin-left: 20px;
-    color: beige;
-    font-family: fuente1, sans-serif;
-    font-size: 11px;
-  }
-  @font-face { 
-    font-family: 'fuente4';
-    src: url('fuente4.woff') format('woff'); 
-    font-family: 'fuente1';
-    src: url('fuente1.woff') format('woff'); 
-} 
-div{
-  position: absolute;
-}
-  </style>
+    <title>Time Speed</title> 
+    <link rel="stylesheet" href="fuente3.woff">
 </head>
-<body onload="procesos()">
-    <audio id="musica"loop>
-      <source src="cancion1.mp3" type="audio/mp3">
-    </audio>
-    <div style="left: 27px;">
-      <div class="contenedor" style="left: 90px;">
-        <img style="top: 300px; margin-left: 100px;" src="azul.png" id="imagen" onclick="girarImagen()"></img>
-        <p>El Batimóvil es el sueño de todo niño hecho realidad: ¡parte coche de carreras, parte tanque blindado y parte bat-móvil! Es como si Batman hubiera decidido que el tráfico normal no era lo suyo y se lanzara a las calles con un juguete de control remoto gigante. ¡Con sus llantas resistentes a los pinchazos y su sistema de navegación que te lleva directo a la batcueva sin atascos, este auto es más cool que un pingüino en un iglú con aire acondicionado!</p>
-        <button style="margin-left: 20px; margin-top: 20px;" class='play-button' onclick="window.location.href='Mapa2.html'">Easy</button>
-      </div>
-
-      <div class="contenedor" style="left: 440px;">
-        <img style="top: 300px; margin-left: 100px;" src="cocheAzul.png" id="imagen2" onclick="girarImagen()"></img>
-        <p>El auto de carreras del Jefazo es como una discoteca móvil sobre ruedas, con luces parpadeantes y música a todo volumen. Cada curva es una oportunidad para hacer una coreografía improvisada, y el humo de los neumáticos es más un efecto especial que un indicador de velocidad. ¡Hasta los semáforos se ponen en verde por pura diversión cuando este bólido pasa cerca!</p>
-        <button style="margin-left: 20px; margin-top: 70px;" class='play-button' onclick="window.location.href='Mapadejuego.html'">Medium</button>
-      </div>
-
-      <div class="contenedor" style="left: 770px;">
-        <img style="top: 300px; margin-left: 100px;" src="verde.png" id="imagen3" onclick="girarImagen()"></img>
-        <p>El auto de carreras de la tortuga es un verdadero espectáculo sobre ruedas. Con un caparazón aerodinámico que despierta envidia en los coches deportivos, y una velocidad que desafía todas las expectativas (bueno, al menos las expectativas de una tortuga), este bólido está listo para darle una carrera a la liebre. ¡Y lo mejor de todo es que viene con un sistema de navegación lento pero seguro que te lleva a la meta con estilo y sin preocupaciones!</p>
-        <button style="margin-left: 20px; margin-top: 20px;" class='play-button' onclick="window.location.href='Dificil.html'">Hard</button>
-      </div>
-
-      <div class="contenedor" style="left: 1100px;">
-        <img style="top: 300px; margin-left: 100px;" src="cocherosita.png" id="imagen4" onclick="girarImagen()"></img>
-        <p>El auto de carreras de Messi en la F1 es como un bailarín en zapatillas de ballet sobre el asfalto, pero con la ferocidad de un león hambriento de victoria. Es tan rápido que los radares tienen que hacer yoga para mantenerse al día con él, y las curvas se ponen celosas de su elegante estilo. ¡Incluso los mecánicos están considerando cambiar sus herramientas por botines de fútbol para seguirle el ritmo!</p>
-        <button style="margin-left: 20px; margin-top: 50px;" class='play-button' onclick="window.location.href='supervivencia.html'">Survival</button>
-      </div>
-    </div>
-    <button style="left: 45%; top: 90%; width: 210px; height: 40px;" class="play-button" onclick="window.location.href='index.html'">Back</button>
-</body>
-<script>
-   function procesos(){
-    var imagen = document.getElementById('imagen');
-    var imagen2 = document.getElementById("imagen2");
-    var imagen3 = document.getElementById("imagen3");
-    var imagen4 = document.getElementById("imagen4");
-    var grados = 10;
-    setInterval(
-        function girarImagen() {
-        var musica = document.getElementById("musica");
-        musica.play();
-        grados = grados +10; 
-        imagen.style.transform = 'rotate(' + grados + 'deg)';
-        imagen2.style.transform = 'rotate(' + grados + 'deg)';
-        imagen3.style.transform = 'rotate(' + grados + 'deg)';
-        imagen4.style.transform = 'rotate(' + grados + 'deg)';
+<style>
+    body {
+        background-color: #f4ecec;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        overflow: hidden;
+        display: grid;
+        place-content: center; 
+    } 
+    #juego {
+        width: 250px;
+        height: 735px;
+        position: relative;
+        margin: 0px auto;
+        background-image: url('w-road.png');
+        background-size: 100%; 
+        background-repeat: repeat-y;
+        z-index: -10; /* Asegura que esté detrás de la línea de la carretera */
     }
-    ,60);
-   }
-</script>
-</html>l>
+
+    #carro {
+        background-image: url('cocherosita.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 65px;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 1px;
+        z-index: 10px;
+    }
+    
+    .obstaculo {
+        position: absolute;
+        width: 30px;
+        border-radius: 10px;
+        top: -30px; 
+    }
+
+    .detalle1 {
+        background-image: url('w-detalle1.png');
+        animation-delay: 0s;
+    }
+
+    .detalle2 {
+        background-image: url('w-detalle2.png');
+        animation-delay: 1s;
+    }
+
+    @keyframes mover {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    } 
+
+    #puntos {
+        position: absolute;
+        top: 190px;
+        left: 640px;
+        transform: translateX(-50%);
+        color: rgb(0, 0, 0);
+        font-family: fuente3, sans-serif;
+        font-size: 120px;
+    }
+
+    #velocidad {
+        position: absolute;
+        top: 230px;
+        right: 480px;
+        transform: translateX(-50%);
+        color: rgb(0, 0, 0);
+        font-family: fuente3, sans-serif;
+        font-size: 120px;
+    }
+
+
+    img.coche {
+        width: 30px;
+        height: 50px;
+        border-radius: 6px;
+        box-shadow: 0px -110px 90px 4px rgb(226, 211, 5);
+    }
+    @font-face { 
+    font-family: 'fuente3';
+    src: url('fuente3.woff') format('woff'); 
+}
+</style>
+<body onclick="audios()">
+    <audio id="musica"loop>
+        <source src="cancion1.mp3" type="audio/mp3">
+    </audio>
+     <div class="road">
+        </div class="police"><div>
+            <img src="w-detalles.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 500px; top: 675px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 560px; top: 625px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 550px; top: 615px; z-index: 5;">    
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 560px; top: 565px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 540px; top: 550px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 510px; top: 500px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 560px; top: 460px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 550px; top: 450px; z-index: 5;">    
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 560px; top: 370px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 530px; top: 390px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 490px; top: 320px; z-index: 5;">    
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 560px; top: 300px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 550px; top: 310px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 510px; top: 200px; z-index: 5;"> 
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 490px; top: 220px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 530px; top: 255px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 560px; top: 190px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 540px; top: 145px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 530px; top: 135px; z-index: 5;">    
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 560px; top: 90px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 540px; top: 15px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; left: 510px; top: 15px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; left: 570px; top: 65px; z-index: 5;"> 
+
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right: 560px; top: 565px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 540px; top: 550px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right: 510px; top: 500px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 560px; top: 460px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 550px; top: 450px; z-index: 5;">    
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right: 560px; top: 370px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 530px; top: 390px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right: 490px; top: 320px; z-index: 5;">    
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 560px; top: 300px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 550px; top: 310px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px;right:  510px; top: 200px; z-index: 5;"> 
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px;right:  490px; top: 220px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 530px; top: 255px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 560px; top: 190px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 540px; top: 145px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px; right: 530px; top: 135px; z-index: 5;">    
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right:  510px; top: 90px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px;  right: 540px; top: 15px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right:  510px; top: 15px; z-index: 5;"> 
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px;  right: 570px; top: 65px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px;  right: 570px; top: 650px; z-index: 5;">
+            <img src="w-detalle2.png" alt="" style="position: absolute; width: 100px; height: 80px; right:  530px; top: 665px; z-index: 5;">
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px;  right: 560px; top: 667px; z-index: 5;">    
+            <img src="w-detalle1.png" alt="" style="position: absolute; width: 80px; height: 30px;  right: 520px; top: 630px; z-index: 5;">
+        </div>
+    <div class="fondo">    
+    </div>
+    <div id="juego">
+        <img src="azul.png" class="coche" id="carro">
+        <div id="puntos">Puntos 0</div>
+        <div id="velocidad">Velocidad</div>
+    </div>
+
+    <script>
+        const juego = document.getElementById('juego');
+        const carro = document.getElementById('carro');
+        const puntos = document.getElementById('puntos');
+        const velocidad = document.getElementById('velocidad');
+        var tipocarro =1;
+        let carroPosicion = 50; // Inicialmente centrado
+        let puntosValor = 0;
+        var infinito=0;
+        let velocidadObstaculos = 10; // Velocidad inicial de los obstáculos
+    
+        function audios(){
+            var musica = document.getElementById("musica");
+            musica.play();
+        }
+        // Mover el carro con las teclas de flecha
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft' && carroPosicion > 20) {
+                carroPosicion -= 5;
+            } else if (event.key === 'ArrowRight' && carroPosicion < 80) {
+                carroPosicion += 5;
+            }
+            carro.style.left = `${carroPosicion}%`;
+        });
+    
+        // Crear obstáculos
+        setInterval(function() {
+            const obstaculo = document.createElement('img');
+            switch (tipocarro) {
+                case 1:
+                    obstaculo.src = 'cocherosita.png';
+                    tipocarro =tipocarro + 1;
+                    break;
+                case 2:
+                    obstaculo.src = 'cocheazul.png';
+                    tipocarro =tipocarro + 1;
+                    break;
+                case 3:
+                    obstaculo.src = 'azul.png';
+                    tipocarro =tipocarro + 1;
+                    break;
+                case 4:
+                    obstaculo.src ='verde.png';
+                    tipocarro=1;
+                    break;
+            }
+            obstaculo.classList.add('obstaculo');
+            obstaculo.style.left = `${35+ Math.random() * 150}px`;
+            juego.appendChild(obstaculo);
+            
+            // Animación del obstáculo
+            const obstaculoIntervalo = setInterval(function() {
+                const obstaculoPosicion = obstaculo.offsetTop;
+                // Comprobar si el obstáculo se ha salido del juego
+                if (obstaculoPosicion > 750) { /*550*/
+                    obstaculo.remove();
+                    clearInterval(obstaculoIntervalo);
+                } else {
+                    obstaculo.style.top = `${obstaculoPosicion + 10}px`; // Velocidad del obstáculo
+                    if (detectarColision(obstaculo, carro)) {
+                        // Colisión detectada, juego terminado
+                        window.location.href="carga.html"; // Recargar la página para reiniciar el juego
+                    }
+                }
+            }, 50);
+        }, 800); // Crear un nuevo obstáculo cada segundo
+    
+        function detectarColision(obstaculo, carro) {
+            const rect1 = obstaculo.getBoundingClientRect();
+            const rect2 = carro.getBoundingClientRect();
+            return !(rect1.right < rect2.left ||
+                rect1.left > rect2.right ||
+                rect1.bottom < rect2.top ||
+                rect1.top > rect2.bottom);
+        }
+    
+        // Contador de puntos
+        setInterval(function() {
+            puntosValor++;
+            puntos.textContent = 'SCO' + ' ' + 'RE  ' + puntosValor;
+            velocidad.textContent = 'V' + ' ' + 10;
+        }, 1000);
+    </script>
+</body>
+</html>

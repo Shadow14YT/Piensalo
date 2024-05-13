@@ -2,116 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.9">
-  <link rel="stylesheet" href="fuente4.woff">
-  <link rel="stylesheet" href="fuente1.woff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>!! JUGAR !!</title>
   <style>
     body{
-      /*text-align: center;
+      text-align: center;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;g
+      display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;*/
-      background-image:url("b-jugar4.jpg");
+      height: 100vh;
+      background-image:url("seleccioncoche.png");
       background-repeat: no-repeat;
-      background-size: cover; 
+      background-size: cover;
+      background-position: center;
     }
-    .play-button { 
-   position: absolute;
-    width: 250px;
-    height: 50px;  
-  background-color: #000000; /* Color de fondo */
-  font-family: fuente1, sans-serif;
-  color: #fff; /* Color del texto */
-  border: none; /* Sin borde */ 
-  font-size: 24px; /* Tamaño del texto */
-  /*padding: 15px 40px;  Espaciado interno */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  transition: all 0.3s ease; /* Transición suave */
-  border-bottom: 10px solid #ffffff; /* Borde sólido de color negro en la parte inferior */
-  border-left: 10px solid #ffffff; /* Borde sólido de color negro en el lado izquierdo */
-  position: absolute; /* Agregar posición absoluta */ 
-}
-
-/* Estilo del botón al pasar el cursor */
-.play-button:hover {
-  background-color: #ffffff; /* Cambia el color de fondo */
-  border-color: #000000;
-  color: #000000;
-}
-
-/* Estilo del botón al hacer clic */
-.play-button:active {
-  transform: translateY(2px); /* Efecto de clic */ 
-}
-  .contenedor{
-    border-bottom: #fff 10px solid;
-    border-left: #fff 10px solid;
-    width: 270px;
-    height: 540px;
-    position: absolute;
-    top: 70px;
-  }
-  .contenedor:hover{
-    border-bottom: #000000 10px solid;
-    border-left: #0f001f 10px solid;   
-  }
-  img{
-    width: 60px;
-    height: 140px;
-  }
-  p{
-    margin-left: 20px;
-    color: beige;
-    font-family: fuente1, sans-serif;
-    font-size: 11px;
-  }
-  @font-face { 
-    font-family: 'fuente4';
-    src: url('fuente4.woff') format('woff'); 
-    font-family: 'fuente1';
-    src: url('fuente1.woff') format('woff'); 
-} 
-div{
-  position: absolute;
-}
+    button {
+        margin: 0px auto;
+        width: 150px;
+        height: 50px;
+        background-color: rgba(66, 66, 66, 0.527);
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        cursor: pointer;
+        border: .1px solid white;
+    }
   </style>
 </head>
 <body onload="procesos()">
     <audio id="musica"loop>
       <source src="cancion1.mp3" type="audio/mp3">
     </audio>
-    <div style="left: 27px;">
-      <div class="contenedor" style="left: 90px;">
-        <img style="top: 300px; margin-left: 100px;" src="azul.png" id="imagen" onclick="girarImagen()"></img>
-        <p>El Batimóvil es el sueño de todo niño hecho realidad: ¡parte coche de carreras, parte tanque blindado y parte bat-móvil! Es como si Batman hubiera decidido que el tráfico normal no era lo suyo y se lanzara a las calles con un juguete de control remoto gigante. ¡Con sus llantas resistentes a los pinchazos y su sistema de navegación que te lleva directo a la batcueva sin atascos, este auto es más cool que un pingüino en un iglú con aire acondicionado!</p>
-        <button style="margin-left: 20px; margin-top: 20px;" class='play-button' onclick="window.location.href='Mapa2.html'">Easy</button>
-      </div>
-
-      <div class="contenedor" style="left: 440px;">
-        <img style="top: 300px; margin-left: 100px;" src="cocheAzul.png" id="imagen2" onclick="girarImagen()"></img>
-        <p>El auto de carreras del Jefazo es como una discoteca móvil sobre ruedas, con luces parpadeantes y música a todo volumen. Cada curva es una oportunidad para hacer una coreografía improvisada, y el humo de los neumáticos es más un efecto especial que un indicador de velocidad. ¡Hasta los semáforos se ponen en verde por pura diversión cuando este bólido pasa cerca!</p>
-        <button style="margin-left: 20px; margin-top: 70px;" class='play-button' onclick="window.location.href='Mapadejuego.html'">Medium</button>
-      </div>
-
-      <div class="contenedor" style="left: 770px;">
-        <img style="top: 300px; margin-left: 100px;" src="verde.png" id="imagen3" onclick="girarImagen()"></img>
-        <p>El auto de carreras de la tortuga es un verdadero espectáculo sobre ruedas. Con un caparazón aerodinámico que despierta envidia en los coches deportivos, y una velocidad que desafía todas las expectativas (bueno, al menos las expectativas de una tortuga), este bólido está listo para darle una carrera a la liebre. ¡Y lo mejor de todo es que viene con un sistema de navegación lento pero seguro que te lleva a la meta con estilo y sin preocupaciones!</p>
-        <button style="margin-left: 20px; margin-top: 20px;" class='play-button' onclick="window.location.href='Dificil.html'">Hard</button>
-      </div>
-
-      <div class="contenedor" style="left: 1100px;">
-        <img style="top: 300px; margin-left: 100px;" src="cocherosita.png" id="imagen4" onclick="girarImagen()"></img>
-        <p>El auto de carreras de Messi en la F1 es como un bailarín en zapatillas de ballet sobre el asfalto, pero con la ferocidad de un león hambriento de victoria. Es tan rápido que los radares tienen que hacer yoga para mantenerse al día con él, y las curvas se ponen celosas de su elegante estilo. ¡Incluso los mecánicos están considerando cambiar sus herramientas por botines de fútbol para seguirle el ritmo!</p>
-        <button style="margin-left: 20px; margin-top: 50px;" class='play-button' onclick="window.location.href='supervivencia.html'">Survival</button>
-      </div>
-    </div>
-    <button style="left: 45%; top: 90%; width: 210px; height: 40px;" class="play-button" onclick="window.location.href='index.html'">Back</button>
+  <table>
+    <tr>
+      <td><button onclick="window.location.href='Mapa2.html'"><h3>¡FACIL! </h3><p>El Batimóvil es el sueño de todo niño hecho realidad: ¡parte coche de carreras, parte tanque blindado y parte bat-móvil! Es como si Batman hubiera decidido que el tráfico normal no era lo suyo y se lanzara a las calles con un juguete de control remoto gigante. ¡Con sus llantas resistentes a los pinchazos y su sistema de navegación que te lleva directo a la batcueva sin atascos, este auto es más cool que un pingüino en un iglú con aire acondicionado!</p><br><img src="azul.png" id="imagen" onclick="girarImagen()"></button></td>
+      <td><button onclick="window.location.href='Mapadejuego.html'"><h3>¡NORMAL!</h3><p>El auto de carreras del Jefazo es como una discoteca móvil sobre ruedas, con luces parpadeantes y música a todo volumen. Cada curva es una oportunidad para hacer una coreografía improvisada, y el humo de los neumáticos es más un efecto especial que un indicador de velocidad. ¡Hasta los semáforos se ponen en verde por pura diversión cuando este bólido pasa cerca!</p><img src="cocheAzul.png" id="imagen2" onclick="girarImagen()"></button></td>
+      <td><button onclick="window.location.href='Dificil.html'"><h3>¡DIFICIL!</h3><p>El auto de carreras de la tortuga es un verdadero espectáculo sobre ruedas. Con un caparazón aerodinámico que despierta envidia en los coches deportivos, y una velocidad que desafía todas las expectativas (bueno, al menos las expectativas de una tortuga), este bólido está listo para darle una carrera a la liebre. ¡Y lo mejor de todo es que viene con un sistema de navegación lento pero seguro que te lleva a la meta con estilo y sin preocupaciones!</p><img src="verde.png" id="imagen3" onclick="girarImagen()"></button></td>
+      <td><button onclick="window.location.href='supervivencia.html'"><h3>¡AUMENTO!</h3><p>El auto de carreras de Messi en la F1 es como un bailarín en zapatillas de ballet sobre el asfalto, pero con la ferocidad de un león hambriento de victoria. Es tan rápido que los radares tienen que hacer yoga para mantenerse al día con él, y las curvas se ponen celosas de su elegante estilo. ¡Incluso los mecánicos están considerando cambiar sus herramientas por botines de fútbol para seguirle el ritmo!</p><img src="cocherosita.png" id="imagen4" onclick="girarImagen()"></button></td>
+    </tr>
+  </table>
+  
 </body>
 <script>
    function procesos(){
@@ -130,10 +62,6 @@ div{
         imagen3.style.transform = 'rotate(' + grados + 'deg)';
         imagen4.style.transform = 'rotate(' + grados + 'deg)';
     }
-    ,60);
-   }
-</script>
-</html>
     ,60);
    }
 </script>
