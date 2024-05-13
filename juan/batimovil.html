@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Batimóvil</title>
+    <style>
+        body{
+            background: black;
+        }
+        h1{
+            text-align:center ;
+            color:#5C7896;
+        }
+        p{
+            color: #5C7896;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <div class="principal">
+            <tr>
+                <th><p><h1><a href="menu.html"><i>Time Spit</i></a></h1></p></th>
+            </tr>
+            <div class="ops">
+                <tr>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="messif1.html"><img src="cocherosita.png" id="imagen" onclick="girarImagen"><p>El Messi F1</p></a></div></th>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="jefazo.html"><img src="cocheAzul.png" id="imagen2" onclick="girarImagen"><p>El jefazo</p></a></div></th>
+                </tr>
+                <tr>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="batimovil.html"><img src="azul.png" id="imagen3" onclick="girarImagen" width="70px"><p>El Batimóvil</p></a></div></th>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="messif1.html"><img src="verde.png" id="imagen4" onclick="girarImagen" ><p>La Tortuga</p></a></div></th>
+                </tr>
+                    <th><div><p>El Batimóvil es el sueño de todo niño hecho realidad: ¡parte coche de carreras, parte tanque blindado y parte bat-móvil! Es como si Batman hubiera decidido que el tráfico normal no era lo suyo y se lanzara a las calles con un juguete de control remoto gigante. ¡Con sus llantas resistentes a los pinchazos y su sistema de navegación que te lleva directo a la batcueva sin atascos, este auto es más cool que un pingüino en un iglú con aire acondicionado!</p></div</th>
+                </tr>
+            </div>
+        </div>
+    </table>
+</body>
+<script>
+    var imagen = document.getElementById('imagen');
+    var imagen2 = document.getElementById("imagen2");
+    var imagen3 = document.getElementById("imagen3");
+    var imagen4 = document.getElementById("imagen4");
+    var grados = 10;
+    setInterval(
+        function girarImagen() {
+        grados = grados +10; 
+        imagen.style.transform = 'rotate(' + grados + 'deg)';
+        imagen2.style.transform = 'rotate(' + grados + 'deg)';
+        imagen3.style.transform = 'rotate(' + grados + 'deg)';
+        imagen4.style.transform = 'rotate(' + grados + 'deg)';
+    }
+    ,60)
+    
+</script>
+</html>

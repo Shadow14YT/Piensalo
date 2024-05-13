@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link rel="stylesheet" href="fuente4.woff">
+        <title>index</title>
+
+        <style>
+            body{
+                background-color: black;
+                background-image: url('b-index.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+/* Estilo del botón */
+.play-button { 
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    top: 74%;
+    left: 38%;
+  background-color: #083a5b; /* Color de fondo */
+  font-family: fuente4, sans-serif;
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */ 
+  font-size: 24px; /* Tamaño del texto */
+  padding: 15px 40px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  transition: all 0.3s ease; /* Transición suave */
+  border-bottom: 10px solid #000; /* Borde sólido de color negro en la parte inferior */
+  border-left: 10px solid #000; /* Borde sólido de color negro en el lado izquierdo */
+  position: absolute; /* Agregar posición absoluta */ 
+}
+
+/* Estilo del botón al pasar el cursor */
+.play-button:hover {
+  background-color: #000000; /* Cambia el color de fondo */
+  border-color: #fff;
+}
+
+/* Estilo del botón al hacer clic */
+.play-button:active {
+  transform: translateY(2px); /* Efecto de clic */ 
+
+}
+ 
+            @media only screen and (max-width: 600px) {
+            }
+            @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            }
+            @media only screen and (min-width: 1025px) {
+            }
+
+            @font-face { 
+    font-family: 'fuente4';
+    src: url('fuente4.woff') format('woff'); 
+}
+    #titulo{
+        position: absolute;
+        font-family: fuente4, sans-serif;
+        color: white;
+        font-size: 120px;
+        top: 30%;
+        left: 19%;
+    }
+    </style>
+
+    </head>
+    <body onclick="audios()">
+        <audio id="musica"loop>
+            <source src="cancion1.mp3" type="audio/mp3">
+        </audio>
+        <div>
+            <button class='play-button' onclick="window.location.href='Jugar.html'">Play</button>
+        </div>
+        <div id="titulo">TIME SPEED</div>
+    </body>
+    <script>
+        function audios(){
+            var musica = document.getElementById("musica");
+            musica.play();
+        }
+    </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Messi F1</title>
+    <style>
+        body{
+            background: black;
+        }
+        h1{
+            text-align:center ;
+            color:#5C7896;
+        }
+        p{
+            color: #5C7896;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <div class="principal">
+            <tr>
+                <th><p><h1><a href="menu.html"><i>Time Spit</i></a></h1></p></th>
+            </tr>
+            <div class="ops">
+                <tr>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="messif1.html"><img src="cocherosita.png" id="imagen" onclick="girarImagen" width="70px"><p>El Messi F1</p></a></div></th>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="jefazo.html"><img src="cocheAzul.png" id="imagen2" onclick="girarImagen"><p>El jefazo</p></a></div></th>
+                </tr>
+                <tr>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="batimovil.html"><img src="azul.png" id="imagen3" onclick="girarImagen"><p>El Batimóvil</p></a></div></th>
+                    <th><div onclick="window.location.href='Jugar.html'"><a href="messif1.html"><img src="verde.png" id="imagen4" onclick="girarImagen"><p>La Tortuga</p></a></div></th>
+                </tr>
+                <tr>
+                    <th><div><p>El auto de carreras de Messi en la F1 es como un bailarín en zapatillas de ballet sobre el asfalto, pero con la ferocidad de un león hambriento de victoria. Es tan rápido que los radares tienen que hacer yoga para mantenerse al día con él, y las curvas se ponen celosas de su elegante estilo. ¡Incluso los mecánicos están considerando cambiar sus herramientas por botines de fútbol para seguirle el ritmo!</p></div</th>
+                </tr>
+            </div>
+        </div>
+    </table>
+</body>
+<script>
+    var imagen = document.getElementById('imagen');
+    var imagen2 = document.getElementById("imagen2");
+    var imagen3 = document.getElementById("imagen3");
+    var imagen4 = document.getElementById("imagen4");
+    var grados = 10;
+    setInterval(
+        function girarImagen() {
+        grados = grados +10; 
+        imagen.style.transform = 'rotate(' + grados + 'deg)';
+        imagen2.style.transform = 'rotate(' + grados + 'deg)';
+        imagen3.style.transform = 'rotate(' + grados + 'deg)';
+        imagen4.style.transform = 'rotate(' + grados + 'deg)';
+    }
+    ,60)
+    
+</script>
+</html>
