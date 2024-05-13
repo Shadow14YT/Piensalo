@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
     <title>Time Speed</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <link rel="stylesheet" href="fuente3.woff">
 </head>
 <style>
@@ -31,7 +32,7 @@
         width: 30px;
         height: 65px;
         position: absolute;
-        bottom: 100px;
+        bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 1px;
@@ -96,9 +97,9 @@
     src: url('fuente3.woff') format('woff'); 
 }
 </style>
-<body onload="audios()">
+<body onclick="audios()">
     <audio id="musica"loop>
-        <source src="cancion1.mp3" type="audio/mp3">
+        <source src="cancion2.mp3" type="audio/mp3">
     </audio>
      <div class="road">
         </div class="police"><div>
@@ -154,7 +155,7 @@
     <div class="fondo">    
     </div>
     <div id="juego">
-        <img src="verde.png" class="coche" id="carro">
+        <img src="cocherosita.png" class="coche" id="carro">
         <div id="puntos">Puntos 0</div>
         <div id="velocidad">Velocidad</div>
     </div>
@@ -190,7 +191,7 @@
                     tipocarro =tipocarro + 1;
                     break;
                 case 2:
-                    obstaculo.src = 'cocheAzul.png';
+                    obstaculo.src = 'cocheazul.png';
                     tipocarro =tipocarro + 1;
                     break;
                 case 3:
@@ -217,7 +218,7 @@
                     obstaculo.style.top = `${obstaculoPosicion + 30}px`; // Velocidad del obstáculo
                     if (detectarColision(obstaculo, carro)) {
                         // Colisión detectada, juego terminado
-                        window.location.href="Carga.html"; // Recargar la página para reiniciar el juego
+                        window.location.href="carga.html"; // Recargar la página para reiniciar el juego
                     }
                 }
             }, 50);
